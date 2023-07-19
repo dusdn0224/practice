@@ -23,13 +23,13 @@
 
 # print(result)
 
-# # book.py
-# number_of_book = 100
+# book.py
+number_of_book = 100
 
-# def decrease_book(number):
-#     global number_of_book
-#     number_of_book -= number
-#     print(f'남은 책의 수 : {number_of_book}')
+def decrease_book(number):
+    global number_of_book
+    number_of_book -= number
+    print(f'남은 책의 수 : {number_of_book}')
 
 # # ws_3_3.py
 # def rental_book(name, number):
