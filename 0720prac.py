@@ -469,6 +469,25 @@ def is_validation(data):
     else:
         return False, Falselist
 
+user_list = []
+n = 0
+
 def create_user(list):
+    global user_list, n
     result = is_validation(list)
-    
+    if result == True:
+        user_list.append(list)
+    elif 'False' in str(result[0]):
+        n += 1
+        for i in range(len(result[1])):
+            list[result[1][i]] = None
+        user_list.append(list)
+    else:
+        n += 1
+
+for i in range(len(user_data)):
+    create_user(user_data[i])
+
+print(f"'잘못된 데이터로 구성된 유저의 수는 {n} 입니다.'")
+for i in range(len(user_list)):
+    print(user_list[i])
